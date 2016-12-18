@@ -1,0 +1,38 @@
+{
+  "name": "web-board-nodejs",
+  "version": "1.0.0",
+  "description": "on es6 and psql",
+  "main": "dist",
+  "scripts": {
+    "babel": "babel-node src",
+    "lint": "eslint src",
+    "dev": "nodemon -w src --exec 'npm run lint && npm run babel'",
+    "build": "babel src -s -D -d dist",
+    "prestart": "npm run -s build",
+    "start": "nodemon -w src --exec 'npm run babel'",
+    "serve": "node dist"
+  },
+  "author": "Aleksei Velikiy",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "bookshelf": "^0.10.0",
+    "bootstrap": "^3.3.7",
+    "cors": "^2.7.1",
+    "express": "^4.14.0",
+    "knex": "^0.11.10",
+    "nodemailer": "^2.5.0",
+    "pg": "^6.0.3",
+    "pug": "^2.0.0-beta4"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.11.4",
+    "babel-preset-es2015": "^6.13.2",
+    "eslint": "^3.2.2",
+    "nodemon": "^1.10.0"
+  }
+}
