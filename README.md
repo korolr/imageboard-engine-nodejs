@@ -1,1 +1,3 @@
-imageboard written with nodejs and exoress
+imageboard written with nodejs and express
+________
+in development 
